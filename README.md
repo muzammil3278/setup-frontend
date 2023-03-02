@@ -22,3 +22,8 @@ function App() {
 ## react
 
 Check documentation [`react documentation`](https://reactjs.org/) for more details.
+```bash
+npx create-react-app my-app
+```
+`cd my-app
+npm start`
