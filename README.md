@@ -25,5 +25,7 @@ Check documentation [`react documentation`](https://reactjs.org/) for more detai
 ```bash
 npx create-react-app my-app
 ```
-`cd my-app
-npm start`
+`cd my-app`
+`npm start`
+
+First [`react-icons documentation`](https://react-icons.github.io/) 
