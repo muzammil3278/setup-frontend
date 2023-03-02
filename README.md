@@ -29,6 +29,11 @@ npx create-react-app my-app
 
 ## Framer Motion
 
+
+## Typescript
+
+
+
 ## Git
 
 
