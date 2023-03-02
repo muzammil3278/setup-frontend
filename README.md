@@ -9,6 +9,13 @@ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
 ## Tailwind css
 
+Check documentation [`tailwind css documentation`](https://tailwindcss.com/) for more details.
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+
 ## React.js
 
 Check documentation [`react documentation`](https://reactjs.org/) for more details.
