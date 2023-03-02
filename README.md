@@ -7,7 +7,9 @@ Check documentation [`chakra-ui documentation`](https://chakra-ui.com/) for more
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
-## react
+## Tailwind css
+
+## React.js
 
 Check documentation [`react documentation`](https://reactjs.org/) for more details.
 ```bash
@@ -17,3 +19,8 @@ npx create-react-app my-app
 `npm start`
 
 ### First [`react-icons documentation`](https://react-icons.github.io/) 
+### Second [`react-slick documentation`](https://react-slick.neostack.com/) 
+### Third [`react-countup documentation`](https://www.npmjs.com/package/react-countup) 
+### Forth [`typewriter-effect documentation`](https://www.npmjs.com/package/typewriter-effect) 
+
+## Next.js
