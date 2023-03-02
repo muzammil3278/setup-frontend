@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+  .rounded-lg {
+      @apply rounded p-3;
+  }
+}
+
 *,
 *::before,
 *::after{
@@ -17,7 +24,7 @@ body {
   background: #ecf0f1!important;
 }
 ul{
-  list-style: none;
+  list-style: none!important;
 }
 
 a {
@@ -25,83 +32,4 @@ a {
   text-decoration: none;
 }
 
-
-.nav-link {
-  position: relative;
-}
-.nav-link span:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: #f8dd62;
-  visibility: visible;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-.nav-link:hover span:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-@media (max-width: 767px) {
-  .dropdown:hover .dropdown-content {
-    display: none;
-  }
-}
-.overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.overlay-bg {
-  background: rgba(0, 0, 0, 0.4);
-  transition: all 0.5s;
-}
-.image-thumb .img-fluid {
-  transition: all 0.5s;
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-.image-thumb:hover .img-fluid {
-  transform: scale(1.3) rotate(5deg);
-  transition: all 0.5s;
-}
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-img {
-  vertical-align: middle;
-  border-style: none;
-}
-
-.img-fluid-left{
-  height: 550px;
-}
-.img-fluid-1{
-  height: 275px;
-}
-.img-fluid-2{
-  height: 275px;
-}
-@media (max-width:1024){
-  .img-fluid-left{
-    height: 400px;
-  }
-  .img-fluid-1{
-    height: 400px;
-  }
-  .img-fluid-2{
-    height: 400px;
-  }
-}
 
