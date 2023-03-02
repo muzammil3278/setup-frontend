@@ -24,3 +24,7 @@ npx create-react-app my-app
 ### Forth [`typewriter-effect documentation`](https://www.npmjs.com/package/typewriter-effect) 
 
 ## Next.js
+
+
+
+## Framer Motion
