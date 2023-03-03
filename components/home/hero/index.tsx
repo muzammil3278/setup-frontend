@@ -13,7 +13,7 @@ const btn = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1.5 },
+    transition: { duration: 1 },
   },
   hidden: {
     opacity: 0,
@@ -37,7 +37,7 @@ const image = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1 },
+    transition: { duration: 1.5 },
   },
   hidden: {
     opacity: 0,
