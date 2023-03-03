@@ -63,10 +63,15 @@ git add .
 ```
 44444 
 ```
-git commit -m "First comment
+git commit -m "First comment"
 ```
 55555 [`git push`]
 55555 [`git pull`]
 
 
 ## Github
+import dynamic from 'next/dynamic'
+
+const DynamicHeader = dynamic(() => import('../components/header'), {
+  loading: () => 'Loading...',
+})

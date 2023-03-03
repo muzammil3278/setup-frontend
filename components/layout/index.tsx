@@ -1,7 +1,7 @@
-import Header from "./header";
-import Footer from "./footer";
-import Navbar from "./navbar";
-
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("./header"));
+const Footer = dynamic(() => import("./footer"));
+const Navbar = dynamic(() => import("./navbar"));
 
 type DashboardLayoutProps = {
   children: React.ReactNode;
