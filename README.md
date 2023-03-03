@@ -22,6 +22,7 @@ Check documentation [`react documentation`](https://reactjs.org/) for more detai
 ```bash
 npx create-react-app my-app
 ```
+
 `cd my-app`
 `npm start`
 
@@ -32,7 +33,13 @@ npx create-react-app my-app
 
 ## Next.js
 
+Check documentation [`next js documentation`](https://nextjs.org/) for more details.
 
+```bash
+npx create-neext-app my-app
+```
+`cd my-app`
+`npm start`
 
 ## Framer Motion
 
@@ -42,6 +49,12 @@ npx create-react-app my-app
 
 
 ## Git
+### 11111 [`git init`]
+### 22222 [`git status`]
+### 33333 [`git add .`]
+### 44444 [`git commit -m "First comment"`]
+### 55555 [`git push`]
+### 55555 [`git pull`]
 
 
 ## Github
