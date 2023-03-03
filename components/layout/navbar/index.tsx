@@ -22,6 +22,7 @@ import {
   HamburgerIcon,
 } from "@chakra-ui/icons";
 import Image from "next/image";
+import Logo from '@/components/layout/navbar/logo'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -33,7 +34,6 @@ export default function WithSubnavigation() {
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        // borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
         <Flex
@@ -53,12 +53,7 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
          
-          <Image src='/logo/logo.png' 
-          alt="muzammil logo" 
-          title="muzammil logo" 
-          height="150"
-          width="150"
-          />
+       <Logo />
 
           <Flex display={{ base: "none", md: "flex" }} alignItems={"center"} ml={10}>
             <DesktopNav />
