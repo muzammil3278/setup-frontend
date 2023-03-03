@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -28,6 +29,7 @@
     "react-intersection-observer": "^9.4.2",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
+    "react-toggle-dark-mode": "^1.1.1",
     "slick-carousel": "^1.8.1",
     "typescript": "4.9.5",
     "typewriter-effect": "^2.19.0"
