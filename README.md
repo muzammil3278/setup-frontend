@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## chakra-ui
-Check documentation [`chakra-ui documentation`](https://chakra-ui.com/) for more details. :-
+Check documentation [`chakra-ui documentation`](https://chakra-ui.com/) for more details. :- <br> </br>
 Check documentation [`chakura ui components documentation`](https://chakra-templates.dev/) for more details.
 
 ```bash
