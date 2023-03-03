@@ -3,85 +3,30 @@ import Location from "@/components/layout/footer/location";
 import Social from "@/components/layout/footer/Social";
 import Upper from "@/components/layout/footer/upper";
 import Logo from "@/components/layout/navbar/logo";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-
-// bottom to up
-const btn = {
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-  hidden: {
-    opacity: 0,
-    y: 25,
-  },
-};
-const second = {
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.5 },
-  },
-  hidden: {
-    opacity: 0,
-    x: 50,
-  },
-};
 export default function index() {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
   return (
     <>
       <Upper />
       <footer className="bg-gray-800 pt-12 bg-[url('/footer-bg.png')] img bg-top ">
         <div className="container lg:px-10 md:px-7 sm:px-4 px-2 mx-auto flex justify-center items-center flex-wrap ">
           <div className="w-full mb-8 md:w-6/12 lg:w-3/12 ">
-            <motion.div
-              className="logo flex justify-center md:justify-start "
-              ref={ref}
-              variants={btn}
-              initial="hidden"
-              animate={control}
-            >
+            <div className="logo flex justify-center md:justify-start ">
               <Logo />
-            </motion.div>
-            <motion.div
-              className="para mt-6 text-white "
-              ref={ref}
-              variants={btn}
-              initial="hidden"
-              animate={control}
-            >
+            </div>
+            <div className="para mt-6 text-white ">
               <p>
                 My name is Muhammad Muzammil Safdar. I am a web developer with
                 2+ years of experience in Frontend. I used the technology of
                 Html, Css, Js, React.js, Next.js, Tailwind css, Chakura UI,
                 Framer Motion and deployment on vercel.
               </p>
-            </motion.div>
-            <motion.div
-              className="social mt-6"
-              ref={ref}
-              variants={btn}
-              initial="hidden"
-              animate={control}
-            >
+            </div>
+            <div className="social mt-6">
               <h4 className="text-orange-500 mb-4 text-xl font-bold">
                 Follow Me
               </h4>
               <Social />
-            </motion.div>
+            </div>
           </div>
           <div className="w-full mb-8 md:w-6/12 lg:w-3/12 md:pl-10 pl-0 ">
             <h2 className="text-orange-500 mb-6 text-2xl font-semibold">
@@ -89,16 +34,9 @@ export default function index() {
             </h2>
             <ul>
               {firstcolumn.map((navItem) => (
-                <motion.li
-                  ref={ref}
-                  variants={second}
-                  initial="hidden"
-                  animate={control}
-                  className="mb-3 text-base text-white"
-                  key={navItem.id}
-                >
+                <li className="mb-3 text-base text-white" key={navItem.id}>
                   <Link href={navItem.href}>{navItem.label}</Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
