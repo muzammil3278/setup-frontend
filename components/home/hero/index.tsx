@@ -17,7 +17,7 @@ const btn = {
   },
   hidden: {
     opacity: 0,
-    y: 200,
+    y: 10,
   },
 };
 // left to right
@@ -29,7 +29,7 @@ const heading = {
   },
   hidden: {
     opacity: 0,
-    x: -400,
+    x: -10,
   },
 };
 // right to left
@@ -41,7 +41,7 @@ const image = {
   },
   hidden: {
     opacity: 0,
-    x: 300,
+    x: 10,
   },
 };
 
@@ -58,7 +58,7 @@ function index() {
   }, [control, inView]);
   return (
     <>
-      <div className="dark:bg-black bg-white md:pb-10 pb-4 md:pt-6 pt-4">
+      <div className="dark:bg-black bg-white md:pb-10 pb-4 md:pt-6 sm:pt-4 pt-0">
         <div className="container lg:px-10 md:px-7 sm:px-4 px-2 mx-auto flex justify-between items-center flex-wrap">
           <motion.div
             ref={ref}
@@ -70,7 +70,7 @@ function index() {
             <span className="subheading font-bold text-orange-400 text-sm mb-1 relative z-0 w-24 inline-block dark:bg-white bg-orange-100 rounded py-1 px-2">
               Hi There!
             </span>
-            <h1 className="mb-4 font-normal text-6xl text-black dark:text-white">
+            <h1 className="mb-4 font-normal lg:text-6xl md:text-4xl text-2xl text-black dark:text-white">
               I am Muhammad Muzammil Safdar
               <br />
               <span className="typewrite">
