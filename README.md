@@ -49,10 +49,22 @@ npx create-neext-app my-app
 
 
 ## Git
-### 11111 ```git init```
-### 22222 ```git status```
-### 33333 ```git add .```
-### 44444 ```git commit -m "First comment"```
+### 11111 
+```
+git init
+```
+### 22222 
+```
+git status
+```
+### 33333 
+```
+git add .
+```
+### 44444 
+```
+git commit -m "First comment
+```
 ### 55555 [`git push`]
 ### 55555 [`git pull`]
 
