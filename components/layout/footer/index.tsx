@@ -3,11 +3,13 @@ import Location from "@/components/layout/footer/location";
 import Social from "@/components/layout/footer/Social";
 import Upper from "@/components/layout/footer/upper";
 import Logo from "@/components/layout/navbar/logo";
+import { Tag, useColorModeValue } from "@chakra-ui/react";
+
 export default function index() {
   return (
     <>
       <Upper />
-      <footer className="bg-gray-800 pt-12 bg-[url('/footer-bg.png')] img bg-top ">
+      <footer className="bg-gray-800 pt-12 bg-[url('/footer/footer-bg.png')] img bg-top ">
         <div className="container lg:px-10 md:px-7 sm:px-4 px-2 mx-auto flex justify-center items-center flex-wrap ">
           <div className="w-full mb-8 md:w-6/12 lg:w-3/12 ">
             <div className="logo flex justify-center md:justify-start ">
@@ -50,6 +52,16 @@ export default function index() {
                   <Link href={navItem.href}>{navItem.label}</Link>
                 </li>
               ))}
+              {/* <li className="mb-3 text-base flex text-white" >
+                  <Link href=''>designer</Link>
+                  <Tag
+                size={'sm'}
+                bg={useColorModeValue('green.300', 'green.800')}
+                ml={2}
+                color={'white'}>
+                New
+              </Tag>
+                </li> */}
             </ul>
           </div>
           <div className="w-full mb-8 md:w-6/12 lg:w-3/12 ">

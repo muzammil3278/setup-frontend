@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## chakra-ui
 Check documentation [`chakra-ui documentation`](https://chakra-ui.com/) for more details.
+Check documentation [`chakura ui components documentation`](https://chakra-templates.dev/) for more details.
 
 ```bash
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
