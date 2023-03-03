@@ -17,7 +17,7 @@ const btn = {
   },
   hidden: {
     opacity: 0,
-    y: 10,
+    y: 30,
   },
 };
 // left to right
@@ -29,7 +29,7 @@ const heading = {
   },
   hidden: {
     opacity: 0,
-    x: -10,
+    x: -30,
   },
 };
 // right to left
@@ -41,7 +41,7 @@ const image = {
   },
   hidden: {
     opacity: 0,
-    x: 10,
+    x: 30,
   },
 };
 
