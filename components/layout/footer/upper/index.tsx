@@ -1,5 +1,5 @@
 import React from "react";
-import Btn from "@/components/home/hero/comp/button/btn";
+import Btn from "@/components/home/hero/comp/button/btn1";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
