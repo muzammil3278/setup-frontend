@@ -3,7 +3,7 @@ import Btn from "@/components/home/hero/comp/button/btn1";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
+import Link from "next/link";
 // bottom to up
 const btn = {
   visible: {
@@ -61,7 +61,12 @@ export default function index() {
           variants={second}
           initial="hidden"
           animate={control}>
-          <Btn />
+          <Link
+    href="/download-cv"
+    className="subscribe-btn md:px-10 px-7 py-4 text-orange-400 rounded-md mr-4 "
+  >
+    Download CV
+  </Link>
         </motion.div>
       </div>
     </div>
