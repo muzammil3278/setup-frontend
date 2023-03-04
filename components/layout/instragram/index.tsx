@@ -46,22 +46,17 @@ export default function index() {
       <Slider {...settings}>
         {NAV_ITEMS.map((navItem) => (
           <div>
-            <div className="single-popular-item text-center">
-              <div className="item-image overflow-hidden relative">
-                <img
-                  src={navItem.img}
-                  alt={navItem.label}
-                  title={navItem.label}
-                  className="w-full lg:h-72 md:h-64 h-60"
-                />
-                <div className="item-cap absolute w-full opacity-0">
-                  <span className="text-white block cursor-pointer text-xl font-medium uppercase lg:py-36 md:py-28 py-24">
-                    <a href={navItem.href} className=" text-center">
-                      {navItem.label}
-                    </a>
-                  </span>
-                </div>
+            <div className="single-popular-item relative w-full">
+              <img
+                src={navItem.img}
+                alt={navItem.label}
+                title={navItem.label}
+                className="image block h-auto w-full"
+              />
+              <div className="overlay">
+                <div className="center text-xl absolute text-center text-black"> {navItem.label}</div>
               </div>
+            
             </div>
           </div>
         ))}
