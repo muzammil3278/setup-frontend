@@ -41,3 +41,70 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+input {
+  border: 0.1rem solid #d1d1d1;
+}
+
+::placeholder {
+  color: #d1d1d1;
+}
+
+/* button */
+.subscribe-btn:hover {
+  color: #fff !important;
+  background-position: right center;
+}
+.subscribe-btn {
+  border-radius: 5rem;
+  background-image: linear-gradient(
+    16deg,
+    #ff005a 0%,
+    #ff5d2d 64%,
+    #ffba00 100%
+  );
+  color: #fff;
+  font-size: 0.7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  text-transform: capitalize;
+  background-size: 200% auto;
+  text-transform: uppercase;
+  box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+}
+.slick-next {
+  display: none!important
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.single-popular-item .item-image .item-cap {
+  visibility: hidden;
+  transition: .4s
+}
+
+.single-popular-item .item-image .item-cap span {
+  background: rgba(29,37,71,.5);
+  padding: 160px 0;
+}
+
+
+.single-popular-item:hover .item-image .item-cap {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible
+}
+
