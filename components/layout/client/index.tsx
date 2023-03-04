@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import data from "./data.json";
 
 export default function index() {
   const settings = {
