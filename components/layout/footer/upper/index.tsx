@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Link from "next/link";
+import { Button } from "@chakra-ui/react";
 // bottom to up
 const btn = {
   visible: {
@@ -56,17 +57,18 @@ export default function index() {
             I completed your project in times.
           </span>
         </motion.div>
-        <motion.div className="md:w-7/12 w-full flex md:justify-end justify-start md:pt-0 pt-5"
+        <motion.div
+          className="md:w-7/12 w-full flex md:justify-end justify-start md:pt-0 pt-5"
           ref={ref}
           variants={second}
           initial="hidden"
-          animate={control}>
-          <Link
-    href="/download-cv"
-    className="subscribe-btn md:px-10 px-7 py-4 text-orange-400 rounded-md mr-4 "
-  >
-    Download CV
-  </Link>
+          animate={control}
+        >
+          <Button
+            className="subscribe-btn md:px-10 px-7 py-4 text-orange-400 rounded-md mr-4 "
+          >
+            Download CV
+          </Button>
         </motion.div>
       </div>
     </div>
