@@ -36,7 +36,7 @@ export default function index() {
       <span className="subheading font-bold text-orange-400 text-sm mb-1 relative z-0 w-24 inline-block dark:bg-white bg-orange-100 rounded py-1 px-2">
         Hi There!
       </span>
-      <h1 className="mb-4 font-normal lg:text-6xl text-4xl text-black dark:text-white">
+      <h1 className="mb-4 font-normal md:text-6xl sm:text-5xl text-3xl text-black dark:text-white">
         I am Muhammad Muzammil Safdar
         <br />
         <span className="typewrite">

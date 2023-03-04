@@ -10,7 +10,7 @@ function subscribe() {
               <h5 className="uppercase text-lg font-medium text-gray-800">
                 Join Our Newsletter
               </h5>
-              <h2 className="mt-9 mb-12 font-bold text-5xl leading-10 py-10">
+              <h2 className="lg:mt-9 mt-0 mb-12 font-bold md:text-5xl text-3xl leading-10 py-5">
                 Subscribe to get Updated with new offers
               </h2>
 
@@ -18,12 +18,12 @@ function subscribe() {
                 <input
                   type="text"
                   placeholder="Enter your email"
-                  className="pt-4 pb-4 pl-16 pr-6 w-full mb-5 h-16 rounded-lg border-none outline-none bg-teal-50"
+                  className="lg:pt-4 pt-3 pb-4 lg:pl-16 pl-10 pr-6 w-full mb-5 h-16 rounded-lg border-none outline-none bg-teal-50"
                 />
-                <button className="subscribe-btn absolute text-xl font-medium px-9 py-2 right-2 top-2 ml-1">
+                <button className="subscribe-btn absolute text-xl font-medium md:px-9 px-4 py-2 md:right-2 -right-2 top-2 ml-1">
                   Subscribe{" "}
                 </button>
-                <span className="absolute font-normal text-xl left-6 top-4 block mb-2 uppercase text-gray-400">
+                <span className="absolute font-normal text-xl lg:left-6 left-4 top-4 block uppercase text-gray-400">
                   @
                 </span>
               </form>

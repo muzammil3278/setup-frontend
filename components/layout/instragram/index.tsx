@@ -11,10 +11,17 @@ export default function index() {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 850,
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -45,10 +52,10 @@ export default function index() {
                   src={navItem.img}
                   alt={navItem.label}
                   title={navItem.label}
-                  className="w-full"
+                  className="w-full lg:h-72 md:h-64 h-60"
                 />
                 <div className="item-cap absolute w-full opacity-0">
-                  <span className="text-white block cursor-pointer text-xl font-medium uppercase">
+                  <span className="text-white block cursor-pointer text-xl font-medium uppercase lg:py-36 md:py-28 py-24">
                     <a href={navItem.href} className=" text-center">
                       {navItem.label}
                     </a>
