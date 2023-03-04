@@ -64,11 +64,11 @@ export default function index() {
           initial="hidden"
           animate={control}
         >
-          <Button
+          <span
             className="subscribe-btn md:px-10 px-7 py-4 text-orange-400 rounded-md mr-4 "
           >
             Download CV
-          </Button>
+          </span>
         </motion.div>
       </div>
     </div>
