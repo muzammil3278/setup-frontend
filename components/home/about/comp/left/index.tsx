@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image";import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -7,14 +8,15 @@ import { useEffect } from "react";
 const btn = {
   visible: {
     opacity: 1,
-    x: 0,
-    transition: { duration: 1.5 },
+    y: 0,
+    transition: { duration: 1 },
   },
   hidden: {
     opacity: 0,
-    x: -60,
+    y: 50,
   },
 };
+
 export default function index() {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -26,16 +28,14 @@ export default function index() {
       control.start("hidden");
     }
   }, [control, inView]);
-
   return (
-    
     <motion.div ref={ref} variants={btn} initial="hidden" animate={control}>
       <Image
-        src="/logo/logo.png"
-        alt="muzammil logo"
-        title="muzammil logo"
-        height="150"
-        width="150"
+        src="/author.jpg"
+        className="w-full "
+        height="400"
+        width="400"
+        alt="about"
       />
     </motion.div>
   );

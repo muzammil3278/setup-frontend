@@ -7,7 +7,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -15,6 +14,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import {
   CloseIcon,
   ChevronDownIcon,
@@ -22,70 +22,97 @@ import {
   HamburgerIcon,
 } from "@chakra-ui/icons";
 import Image from "next/image";
-import Logo from '@/components/layout/navbar/logo'
+import Logo from "@/components/layout/navbar/logo";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
+// bottom to up
+const btn = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.5 },
+  },
+  hidden: {
+    opacity: 0,
+    x: 60,
+  },
+};
 export default function WithSubnavigation() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <div className="bg-gray-900">
-    <div className="container lg:px-8 md:px-6 sm:px-4 px-2 mx-auto">
-      <Flex
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        align={"center"}
-      >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-        >
-          <IconButton
-            onClick={onToggle}
-            color={useColorModeValue("gray.500", "white")}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-         
-       <Logo />
-
-          <Flex display={{ base: "none", md: "flex" }} alignItems={"center"} ml={10}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"red.500"}
-            href={"#"}
-            _hover={{
-              bg: "red.400",
-            }}
+      <div className="container lg:px-4 px-2 mx-auto">
+        <Flex minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} align={"center"}>
+          <Flex
+            flex={{ base: 1, md: "auto" }}
+            ml={{ base: -2 }}
+            display={{ base: "flex", md: "none" }}
           >
-            Sign In
-          </Button>
-        </Stack>
-      </Flex>
+            <IconButton
+              onClick={onToggle}
+              color={useColorModeValue("gray.500", "white")}
+              icon={
+                isOpen ? (
+                  <CloseIcon w={3} h={3} />
+                ) : (
+                  <HamburgerIcon w={5} h={5} />
+                )
+              }
+              variant={"ghost"}
+              aria-label={"Toggle Navigation"}
+            />
+          </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+            <Logo />
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </div>
+            <Flex
+              display={{ base: "none", md: "flex" }}
+              alignItems={"center"}
+              ml={10}
+            >
+              <DesktopNav />
+            </Flex>
+          </Flex>
+
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={"flex-end"}
+            direction={"row"}
+            spacing={6}
+          >
+            <Button
+              as={"a"}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
+              bg={"red.500"}
+              href={"#"}
+              _hover={{
+                bg: "red.400",
+              }}
+            >
+              Sign In
+            </Button>
+          </Stack>
+        </Flex>
+
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      </div>
     </div>
   );
 }
@@ -101,14 +128,8 @@ const DesktopNav = () => {
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
-                p={2}
+                className="p-2 text-sm font-medium text-white hover:no-underline"
                 href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={'white'}
-                _hover={{
-                  textDecoration: "none",
-                }}
               >
                 {navItem.label}
               </Link>
@@ -140,18 +161,15 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link
+      className="block p-2 rounded-md hover:text-red-400"
       href={href}
       role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "red.400" }}
             fontWeight={500}
           >
             {label}
@@ -231,7 +249,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link
+                key={child.label}
+                href={child.href}
+                className="py-2"
+              >
                 {child.label}
               </Link>
             ))}
@@ -243,48 +265,32 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
 interface NavItem {
   label: string;
+  href?: string;
   subLabel?: string;
   children?: Array<NavItem>;
-  href?: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
+  {label: "Home",href: "/",},
+  {label: "About",href: "/about",},
+  {label: "Resume",href: "/resume",},
+  {label: "Contact",href: "/contact",},
+  {label: "Blogs",href: "/blog",},
   {
-    label: "Inspiration",
+    label: "Services",
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
+        label: "Web Development",
         subLabel: "Find your dream design job",
-        href: "#",
+        href: "/web",
       },
       {
-        label: "Freelance Projects",
+        label: "Graphic Desiging",
         subLabel: "An exclusive list for contract work",
         href: "#",
       },
     ],
   },
-  {
-    label: "Learn Design",
-    href: "#",
-  },
-  {
-    label: "Hire Designers",
-    href: "#",
-  },
+  {label: "Skills",href: "/skills",},
+
 ];

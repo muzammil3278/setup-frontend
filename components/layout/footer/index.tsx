@@ -52,16 +52,6 @@ export default function index() {
                   <Link href={navItem.href}>{navItem.label}</Link>
                 </li>
               ))}
-              {/* <li className="mb-3 text-base flex text-white" >
-                  <Link href=''>designer</Link>
-                  <Tag
-                size={'sm'}
-                bg={useColorModeValue('green.300', 'green.800')}
-                ml={2}
-                color={'white'}>
-                New
-              </Tag>
-                </li> */}
             </ul>
           </div>
           <div className="w-full mb-8 md:w-6/12 lg:w-3/12 ">

@@ -16,7 +16,7 @@ const btn = {
   },
   hidden: {
     opacity: 0,
-    x: -60,
+    x: 60,
   },
 };
 export default function index() {
