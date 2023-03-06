@@ -285,18 +285,20 @@ import Logo from "@/components/layout/navbar/logo";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Links = [
-  {label: "vv",href: "/",},
+  {label: "Home",href: "/",},
   {label: "About",href: "/about",},
   {label: "Resume",href: "/resume",},
   {label: "Contact",href: "/contact",},
   {label: "Blogs",href: "/blog",},
   {label: "Skills",href: "/skills",},
+  {label: "Services",href: "/services",},
 
 ];
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link className='px-2 py-1 rounded-md text-white' href={'#'}>
     {children}
   </Link>
+  
 );
 
 export default function Simple() {
@@ -304,10 +306,10 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.700', 'gray.400')} px={4}>
+      <Box bg={useColorModeValue('gray.400', 'gray.100')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
-            size={'md'}
+            size={'lg'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
@@ -320,7 +322,8 @@ export default function Simple() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink>{link.label}</NavLink>
+                
+               <Link className='p-2' href={link.href}>{link.label}</Link>
               ))}
             </HStack>
           </HStack>
@@ -353,7 +356,7 @@ export default function Simple() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-               <NavLink>{link.label}</NavLink>
+               <Link className='py-2' href={link.href}>{link.label}</Link>
               ))}
             </Stack>
           </Box>

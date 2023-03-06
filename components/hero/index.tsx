@@ -11,7 +11,7 @@ const heading = {
   },
   hidden: {
     opacity: 0,
-    x: -400,
+    x: -300,
   },
 };
 function index(props: { head: string }) {
