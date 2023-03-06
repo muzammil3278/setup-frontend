@@ -158,7 +158,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href }: NavItem) => {
   return (
     <Link
       className="block p-2 rounded-md hover:text-red-400"
@@ -174,9 +174,9 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          {/* <Text fontSize={"sm"}>{subLabel}</Text> */}
         </Box>
-        <Flex
+        {/* <Flex
           transition={"all .3s ease"}
           transform={"translateX(-10px)"}
           opacity={0}
@@ -186,7 +186,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           flex={1}
         >
           <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
+        </Flex> */}
       </Stack>
     </Link>
   );
@@ -227,7 +227,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {label}
         </Text>
-        {children && (
+        {/* {children && (
           <Icon
             as={ChevronDownIcon}
             transition={"all .25s ease-in-out"}
@@ -235,10 +235,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             w={6}
             h={6}
           />
-        )}
+        )} */}
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
+      {/* <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack
           mt={2}
           pl={4}
@@ -258,7 +258,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
               </Link>
             ))}
         </Stack>
-      </Collapse>
+      </Collapse> */}
     </Stack>
   );
 };
