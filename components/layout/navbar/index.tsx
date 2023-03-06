@@ -22,7 +22,6 @@
 //   HamburgerIcon,
 // } from "@chakra-ui/icons";
 // import Image from "next/image";
-// import Logo from "@/components/layout/navbar/logo";
 // import { motion, useAnimation } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 // import { useEffect } from "react";
@@ -263,37 +262,7 @@
 //   );
 // };
 
-// interface NavItem {
-//   label: string;
-//   href?: string;
-//   subLabel?: string;
-//   children?: Array<NavItem>;
-// }
 
-// const NAV_ITEMS: Array<NavItem> = [
-//   {label: "Home",href: "/",},
-//   {label: "About",href: "/about",},
-//   {label: "Resume",href: "/resume",},
-//   {label: "Contact",href: "/contact",},
-//   {label: "Blogs",href: "/blog",},
-//   {
-//     label: "Services",
-//     children: [
-//       {
-//         label: "Web Development",
-//         subLabel: "Find your dream design job",
-//         href: "/web",
-//       },
-//       {
-//         label: "Graphic Desiging",
-//         subLabel: "An exclusive list for contract work",
-//         href: "#",
-//       },
-//     ],
-//   },
-//   {label: "Skills",href: "/skills",},
-
-// ];
 import { ReactNode } from 'react';
 import {
   Box,
@@ -312,14 +281,20 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import Link from 'next/link';
+import Logo from "@/components/layout/navbar/logo";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = [
+  {label: "vv",href: "/",},
+  {label: "About",href: "/about",},
+  {label: "Resume",href: "/resume",},
+  {label: "Contact",href: "/contact",},
+  {label: "Blogs",href: "/blog",},
+  {label: "Skills",href: "/skills",},
 
+];
 const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link
-  className='px-2 py-1 rounded-md'
-    href={'#'}>
+  <Link className='px-2 py-1 rounded-md text-white' href={'#'}>
     {children}
   </Link>
 );
@@ -329,7 +304,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box bg={useColorModeValue('gray.700', 'gray.400')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -339,13 +314,13 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Logo />
             <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink>{link.label}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -365,10 +340,10 @@ export default function Simple() {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
+                <MenuItem>Login</MenuItem>
+                <MenuItem>Sign up</MenuItem>
                 <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+                <MenuItem>Dashboard</MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -378,7 +353,7 @@ export default function Simple() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+               <NavLink>{link.label}</NavLink>
               ))}
             </Stack>
           </Box>
