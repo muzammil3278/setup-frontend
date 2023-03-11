@@ -94,7 +94,7 @@ export default function about() {
                 <p className="pt-4">
                   <a
                     href="/download-cv"
-                    className="md:px-10 px-4 md:py-4 py-3 text-white border-solid bg-orange-300 border-white font-bold rounded-md hover:text-orange-300 transition-all hover:bg-white"
+                    className="md:px-10 px-4 md:py-4 py-3 text-white border-solid bg-orange-300 border-white font-bold rounded-md hover:text-orange-300 transition-all hover:bg-gray-100 hover:bottom-2 hover:border-solid hover:border-orange-400"
                   >
                     Download CV
                   </a>

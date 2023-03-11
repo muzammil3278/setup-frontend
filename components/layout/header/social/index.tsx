@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaLinkedin,
   FaInstagram,
+  FaGithub,
 } from "react-icons/fa";
 import { Tooltip } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
@@ -15,12 +16,12 @@ import { useEffect } from "react";
 const btn = {
   visible: {
     opacity: 1,
-    transition: { duration: 1 },
     x: 0,
+    transition: { duration: 1.5 },
   },
   hidden: {
     opacity: 0,
-    x: -60,
+    x: 70,
   },
 };
 export default function index() {
@@ -44,7 +45,7 @@ export default function index() {
         animate={control}
       >
         <Tooltip hasArrow label="Facebook" bg="red.500" closeDelay={200}>
-          <Link href="">
+          <Link href="https://web.facebook.com/profile.php?id=100090769396207" target="_blank">
             <FaFacebookF />
           </Link>
         </Tooltip>
@@ -57,7 +58,7 @@ export default function index() {
         animate={control}
       >
         <Tooltip hasArrow label="You Tube" bg="red.500" closeDelay={200}>
-          <Link href="">
+          <Link href="https://www.youtube.com/channel/UCrtnHcee1Dhk2ew2oKsxQ8g?sub_confirmation=1" target="_blank">
             <FaYoutube />
           </Link>
         </Tooltip>
@@ -69,9 +70,9 @@ export default function index() {
         initial="hidden"
         animate={control}
       >
-        <Tooltip hasArrow label="Linkedin" bg="red.500" closeDelay={200}>
-          <Link href="">
-            <FaLinkedin />
+        <Tooltip hasArrow label="Github" bg="red.500" closeDelay={200}>
+          <Link href="https://github.com/muzammil3278" target="_blank">
+            <FaGithub />
           </Link>
         </Tooltip>
       </motion.div>
@@ -82,9 +83,9 @@ export default function index() {
         initial="hidden"
         animate={control}
       >
-        <Tooltip hasArrow label="Instragram" bg="red.500" closeDelay={200}>
-          <Link href="">
-            <FaInstagram />
+        <Tooltip hasArrow label="Linkedin" bg="red.500" closeDelay={200}>
+          <Link href="https://www.linkedin.com/in/muhammad-muzammil-safdar-2b1851267/" target="_blank">
+            <FaLinkedin />
           </Link>
         </Tooltip>
       </motion.div>

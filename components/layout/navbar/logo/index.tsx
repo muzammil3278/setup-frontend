@@ -1,5 +1,7 @@
 import React from "react";
-import Image from "next/image";import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -28,15 +30,16 @@ export default function index() {
   }, [control, inView]);
 
   return (
-    
     <motion.div ref={ref} variants={btn} initial="hidden" animate={control}>
-      <Image
-        src="/logo/logo.png"
-        alt="muzammil logo"
-        title="muzammil logo"
-        height="150"
-        width="150"
-      />
+      <Link href="/">
+        <Image
+          src="/logo/logo.png"
+          alt="muzammil logo"
+          title="muzammil logo"
+          height="150"
+          width="150"
+        />
+      </Link>
     </motion.div>
   );
 }

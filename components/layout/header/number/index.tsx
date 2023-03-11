@@ -34,7 +34,7 @@ export default function index() {
     <motion.div className="social flex items-center justify-end ">
       <motion.div ref={ref} variants={btn} initial="hidden" animate={control}>
         <Tooltip hasArrow label="Phone" bg="red.500" closeDelay={200}>
-          <Link href="" className=" sm:px-4 px-2 flex items-center ">
+          <Link href="tel:314-487-8266" className=" sm:px-4 px-2 flex items-center ">
             <span className="text-red-500 ">
               <FaPhoneAlt />
             </span>
@@ -46,7 +46,7 @@ export default function index() {
       </motion.div>
       <motion.div ref={ref} variants={btn} initial="hidden" animate={control}>
         <Tooltip hasArrow label="Message" bg="red.500" closeDelay={200}>
-          <Link href="" className=" sm:px-4 px-2 flex items-center pr-2">
+          <Link href="mailto:mmuzammiloff@gmail.com" className=" sm:px-4 px-2 flex items-center pr-2">
             <span className="text-red-500">
               <FaRegEnvelope />
             </span>
